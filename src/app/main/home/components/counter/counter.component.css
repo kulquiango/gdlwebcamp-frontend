@@ -10,20 +10,6 @@
   content: "";
 }
 
-.parallax::before {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  filter: brightness(0.8);
-  -webkit-filter: brightness(0.8);
-}
-
 .resumen-evento {
   position: relative;
   padding: 120px 0;
