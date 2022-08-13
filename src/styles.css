@@ -405,3 +405,60 @@ template {
 [hidden] {
   display: none;
 }
+.seccion {
+  padding: 30px 0;
+}
+
+.seccion p {
+  font-size: 1.2em;
+  text-align: center;
+}
+.contenedor {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button.hollow,
+.button.hollow:hover {
+  background-color: white;
+  color: #fe4918;
+}
+
+.button {
+  background: #fe4918;
+  font-family: "Oswald", sans-serif;
+  padding: 10px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 0.5 ease;
+  border: 2px solid #fe4919;
+}
+
+.button:hover {
+  background: #e33000;
+  cursor: pointer;
+}
+
+.button.transparente {
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.button.transparente:hover {
+  background-color: transparent;
+  border: 2px solid #fe4918;
+  background-color: #fe4918;
+}
+p.numero {
+  color: #fe4918;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+  font-family: "Oswald", sans-serif;
+}
