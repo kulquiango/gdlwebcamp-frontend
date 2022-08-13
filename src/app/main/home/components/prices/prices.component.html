@@ -1,0 +1,32 @@
+<section class="precios seccion">
+  <h2>Precios</h2>
+  <div class="contenedor">
+    <ul class="lista-precios clearfix">
+      <li *ngFor="let card of cards">
+        <div class="tabla-precio">
+          <h3>{{ card.title }}</h3>
+          <p class="numero">{{ card.price }}</p>
+          <ul>
+            <li>Bocadillos Gratis</li>
+            <li>Todas las conferencias</li>
+            <li>Todos los talleres</li>
+          </ul>
+          <a href="" class="button hollow">Comprar</a>
+        </div>
+      </li>
+
+      <!-- <li>
+        <div class="tabla-precio">
+          <h3>Pase por 2 días</h3>
+          <p class="numero">$45</p>
+          <ul>
+            <li>Bocadillos Gratis</li>
+            <li>Todas las conferencias</li>
+            <li>Todos los talleres</li>
+          </ul>
+          <a href="" class="button hollow">Comprar</a>
+        </div>
+      </li> -->
+    </ul>
+  </div>
+</section>
