@@ -1,0 +1,14 @@
+<app-header></app-header>
+<app-info-conference></app-info-conference>
+<section class="contenedor seccion galeria-fotos">
+  <h2 class="galeria-fotos">Galería de fotos</h2>
+
+  <ul class="galeria">
+    <li *ngFor="let image of galery" class="img">
+      <a [href]="getPath() + image.url" data-lightbox="galeria"
+        ><img [src]="getPath() + image.url" [alt]="image.name"
+      /></a>
+    </li>
+  </ul>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,47 @@
+.galeria-fotos {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.fijo {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.contenido-main {
+  position: relative;
+  top: 80px;
+}
+
+@media (min-width: 900px) {
+  .contenido-main {
+    position: relative;
+    top: 50px;
+  }
+}
+
+.conferencia .navegacion-principal .activo {
+  border-bottom: 2px solid #fe4918;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.img {
+  width: 11rem;
+  flex-basis: calc(20% - 0.5rem);
+  min-height: 10rem;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+}
