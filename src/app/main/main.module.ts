@@ -11,6 +11,9 @@ import { CounterComponent } from './components/counter/counter.component';
 import { PricesComponent } from './components/prices/prices.component';
 import { GuestsComponent } from './components/guests/guests.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+import { GuestsPagesComponent } from './pages/guests-pages/guests-pages.component';
+import { ConferencePageComponent } from './pages/conference-page/conference-page.component';
+import { InfoConferenceComponent } from './components/info-conference/info-conference.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
     PricesComponent,
     GuestsComponent,
     CalendarComponent,
+    GuestsPagesComponent,
+    ConferencePageComponent,
+    InfoConferenceComponent,
   ],
   exports: [HomeComponent],
 })

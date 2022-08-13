@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+
 import { HomeComponent } from './pages/home/home.component';
+import { GuestsPagesComponent } from './pages/guests-pages/guests-pages.component';
+import { ConferencePageComponent } from './pages/conference-page/conference-page.component';
 
 const routes: Routes = [
   {
@@ -11,6 +14,14 @@ const routes: Routes = [
   {
     path: 'calendar',
     component: CalendarComponent,
+  },
+  {
+    path: 'guests',
+    component: GuestsPagesComponent,
+  },
+  {
+    path: 'conferences',
+    component: ConferencePageComponent,
   },
   {
     path: '**',
