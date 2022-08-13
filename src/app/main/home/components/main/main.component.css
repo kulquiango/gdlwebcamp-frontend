@@ -1,13 +1,8 @@
-.seccion {
-  padding: 30px 0;
+.programa {
+  position: relative;
 }
 
-.seccion p {
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.contenedor {
-  width: 98%;
-  margin: 0 auto;
+.contenedor-video {
+  max-width: 100%;
+  overflow-x: hidden;
 }
