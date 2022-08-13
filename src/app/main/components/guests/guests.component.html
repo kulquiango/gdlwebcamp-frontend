@@ -3,10 +3,7 @@
 
   <ul class="lista-invitados">
     <li class="invitado" *ngFor="let guest of guests">
-      <a
-        class="invitado-info"
-        href="#invitado<?php echo $invitados['invitado_id']; ?>"
-      >
+      <a class="invitado-info" [href]="guest.url" data-lightbox="galeria">
         <img [src]="guest.url" alt="Imagen invitado" />
         <p>{{ guest.name }}</p>
       </a>

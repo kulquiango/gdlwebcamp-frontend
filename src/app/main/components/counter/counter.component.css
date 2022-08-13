@@ -6,7 +6,7 @@
 }
 
 .contador::before {
-  background-image: url(../../../../../assets/img/bg-resumen.jpg);
+  background-image: url(../../../../assets/img/bg-resumen.jpg);
   content: "";
 }
 
