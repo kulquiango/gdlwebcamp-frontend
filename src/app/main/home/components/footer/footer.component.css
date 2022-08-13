@@ -1,0 +1,38 @@
+.site-footer {
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+footer .contenedor div {
+  color: #fff;
+  padding: 0 20px;
+  font-size: 0.6rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+  }
+}
+footer h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+}
+footer span {
+  color: #fe4918;
+}
+
+.copyright {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 10px 0;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+.menu .redes-sociales {
+  text-align: left;
+}
+.ultimos-tweets {
+  margin-bottom: 10px;
+}
