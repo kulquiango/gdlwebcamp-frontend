@@ -73,3 +73,7 @@
 .slogan span {
   font-weight: bold;
 }
+
+.container {
+  margin: 0 10%;
+}

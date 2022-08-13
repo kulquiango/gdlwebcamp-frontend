@@ -5,7 +5,7 @@
 
 .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -40,4 +40,14 @@
 
 .navegacion-principal-last a:hover {
   color: #fff;
+}
+
+.navegation {
+  display: flex;
+  flex-direction: row;
+}
+
+.navegation {
+  display: flex;
+  gap: 0.3rem;
 }

@@ -1,16 +1,16 @@
 <div class="barra fijo">
   <div class="container">
-    <div>
-      <a href="index.php">
-        <img src="assets/img/logo.svg" alt="GdlWebCamp"
-      /></a>
+    <div class="logo">
+      <a href=""> <img src="assets/img/logo.svg" alt="GdlWebCamp" /></a>
     </div>
-    <nav
-      class="navegacion-principal"
-      *ngFor="let menu of menuNavigation; let last = last"
-      [ngClass]="{ 'navegacion-principal-last': last }"
-    >
-      <a href="">{{ menu.name }}</a>
-    </nav>
+    <div class="navegation">
+      <nav
+        class="navegacion-principal"
+        *ngFor="let menu of menuNavigation; let last = last"
+        [ngClass]="{ 'navegacion-principal-last': last }"
+      >
+        <a href="">{{ menu.name }}</a>
+      </nav>
+    </div>
   </div>
 </div>

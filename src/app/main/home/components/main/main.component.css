@@ -1,0 +1,13 @@
+.seccion {
+  padding: 30px 0;
+}
+
+.seccion p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.contenedor {
+  width: 98%;
+  margin: 0 auto;
+}
