@@ -1,0 +1,45 @@
+.lista-invitados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  justify-content: center;
+}
+.invitado p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+  color: #fe4919;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.invitado:hover img {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+.invitado img {
+  width: 100%;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.invitado:hover p {
+  bottom: -80px;
+  opacity: 0;
+}
+
+.invitado {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .invitado {
+    flex-basis: 33%;
+  }
+}

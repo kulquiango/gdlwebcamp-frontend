@@ -1,0 +1,15 @@
+<section class="contenedor">
+  <h2>Nuestros Invitados</h2>
+
+  <ul class="lista-invitados">
+    <li class="invitado" *ngFor="let guest of guests">
+      <a
+        class="invitado-info"
+        href="#invitado<?php echo $invitados['invitado_id']; ?>"
+      >
+        <img [src]="guest.url" alt="Imagen invitado" />
+        <p>{{ guest.name }}</p>
+      </a>
+    </li>
+  </ul>
+</section>
