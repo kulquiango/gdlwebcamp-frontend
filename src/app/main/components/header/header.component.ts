@@ -13,15 +13,19 @@ export class HeaderComponent implements OnInit {
   menuNavigation = [
     {
       name: 'Conferencias',
+      url: '/conferences',
     },
     {
       name: 'Calendario',
+      url: '/calendar',
     },
     {
       name: 'Invitados',
+      url: '/guests',
     },
     {
       name: 'Reservaciones',
+      url: '/reservations',
     },
   ];
 }

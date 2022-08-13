@@ -1,12 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './home/components/header/header.component';
-import { MainComponent } from './home/components/main/main.component';
+
+import { MainRoutingModule } from './main-routing.module';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { PricesComponent } from './components/prices/prices.component';
+import { GuestsComponent } from './components/guests/guests.component';
+import { CalendarComponent } from './pages/calendar/calendar.component';
+
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [HomeComponent, HeaderComponent, MainComponent],
+  imports: [CommonModule, MainRoutingModule],
+  declarations: [
+    HomeComponent,
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
+    TestimonialsComponent,
+    CounterComponent,
+    PricesComponent,
+    GuestsComponent,
+    CalendarComponent,
+  ],
   exports: [HomeComponent],
 })
 export class MainModule {}

@@ -1,7 +1,7 @@
 <div class="barra fijo">
   <div class="container">
     <div class="logo">
-      <a href=""> <img src="assets/img/logo.svg" alt="GdlWebCamp" /></a>
+      <a routerLink="/"> <img src="assets/img/logo.svg" alt="GdlWebCamp" /></a>
     </div>
     <div class="navegation">
       <nav
@@ -9,7 +9,7 @@
         *ngFor="let menu of menuNavigation; let last = last"
         [ngClass]="{ 'navegacion-principal-last': last }"
       >
-        <a href="">{{ menu.name }}</a>
+        <a [routerLink]="menu.url">{{ menu.name }}</a>
       </nav>
     </div>
   </div>
