@@ -1,0 +1,43 @@
+.barra {
+  background: #353535;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navegacion-principal a {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .navegacion-principal a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem;
+  }
+}
+
+.navegacion-principal a:hover {
+  background-color: #fe4918;
+}
+
+.navegacion-principal-last a {
+  border: 2px solid #fe4918;
+  color: #fe4918;
+}
+
+.navegacion-principal-last a:hover {
+  color: #fff;
+}
