@@ -13,27 +13,27 @@ export class GuestsComponent implements OnInit {
   guests = [
     {
       name: 'Rafael Bautista',
-      url: 'assets/img/guests/invitado1.jpg',
+      url: 'assets/images/guests/invitado1.jpg',
     },
     {
       name: 'Sharu Herrera',
-      url: 'assets/img/guests/invitado2.jpg',
+      url: 'assets/images/guests/invitado2.jpg',
     },
     {
       name: 'Gregorio Sanchez',
-      url: 'assets/img/guests/invitado3.jpg',
+      url: 'assets/images/guests/invitado3.jpg',
     },
     {
       name: 'Susana Rivera',
-      url: 'assets/img/guests/invitado4.jpg',
+      url: 'assets/images/guests/invitado4.jpg',
     },
     {
       name: 'Harold Garcia',
-      url: 'assets/img/guests/invitado5.jpg',
+      url: 'assets/images/guests/invitado5.jpg',
     },
     {
       name: 'Susana Sanchez',
-      url: 'assets/img/guests/invitado6.jpg',
+      url: 'assets/images/guests/invitado6.jpg',
     },
   ];
 }

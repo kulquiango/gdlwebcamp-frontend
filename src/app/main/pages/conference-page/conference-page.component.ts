@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConferencePageComponent implements OnInit {
   constructor() {}
-  private path: string = 'assets/img/galery/';
+  private path: string = 'assets/images/galery/';
 
   getPath() {
     return this.path;

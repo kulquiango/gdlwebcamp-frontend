@@ -43,3 +43,7 @@
     flex-basis: 33%;
   }
 }
+
+.wrapper {
+  padding: 1.5rem 0;
+}

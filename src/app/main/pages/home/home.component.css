@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(../../../../assets/img/encabezado.jpg);
+  background-image: url(../../../../assets/images/encabezado.jpg);
   height: 100vh;
   background-position: center center;
   background-size: cover;
@@ -62,7 +62,7 @@
 
 /*Cuenta Regresiva*/
 .cuenta-regresiva {
-  height: 30vh;
+  height: 15rem;
 }
 
 .cuenta-regresiva ul li {
@@ -91,7 +91,7 @@
 }
 
 .newsletter::before {
-  background-image: url(../../../../assets/img/bg-newsletter.jpg);
+  background-image: url(../../../../assets/images/bg-newsletter.jpg);
   content: "";
 }
 
@@ -112,10 +112,4 @@
   text-transform: uppercase;
   font-size: 7vw;
   font-family: "PT Sans", sans-serif;
-}
-/*Mapa*/
-
-.mapa {
-  height: 420px;
-  background-color: rgb(8, 4, 43);
 }

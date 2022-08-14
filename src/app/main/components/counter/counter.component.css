@@ -2,11 +2,11 @@
 
 .contador {
   position: relative;
-  height: 75vh;
+  height: 30rem;
 }
 
 .contador::before {
-  background-image: url(../../../../assets/img/bg-resumen.jpg);
+  background-image: url(../../../../assets/images/bg-resumen.jpg);
   content: "";
 }
 
