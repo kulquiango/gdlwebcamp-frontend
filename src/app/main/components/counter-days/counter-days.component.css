@@ -1,0 +1,25 @@
+/*Cuenta Regresiva*/
+.cuenta-regresiva {
+	height: 15rem;
+}
+
+.cuenta-regresiva ul li {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.5em;
+}
+
+@media (min-width: 350px) {
+	.cuenta-regresiva li {
+		float: left;
+		width: 50%;
+	}
+}
+
+@media (min-width: 768px) {
+	.cuenta-regresiva ul li {
+		float: left;
+		width: 25%;
+	}
+}
