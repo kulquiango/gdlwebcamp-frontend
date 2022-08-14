@@ -1,0 +1,76 @@
+.menu-programa {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.menu-programa {
+		display: table;
+	}
+}
+
+.menu-programa a {
+	display: block;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #fe4919;
+}
+
+.menu-programa a.activo::after {
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+	width: 30px;
+	background-image: url(../../../../assets/images/utils/talleres-flecha.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	bottom: -20px;
+}
+
+@media (min-width: 768px) {
+	.menu-programa a {
+		display: table-cell;
+	}
+}
+
+.menu-programa i,
+.detalle-evento i {
+	margin-right: 10px;
+	color: #fe4919;
+	font-size: 1.6em;
+}
+
+/*Detalle evento*/
+.detalle-evento {
+	margin-top: 20px;
+	border-bottom: 1px solid black;
+	padding: 0 20px;
+}
+
+.detalle-evento:nth-child(2) {
+	border: none;
+}
+
+.detalle-evento p {
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.wrapper {
+	width: 30rem;
+	margin: 1rem;
+}
+.programa-evento {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 15px;
+	margin-top: 10px;
+}
