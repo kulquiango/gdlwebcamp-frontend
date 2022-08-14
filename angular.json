@@ -19,15 +19,22 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "leaflet/"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/lightbox2/dist/css/lightbox.min.css"
+              "node_modules/lightbox2/dist/css/lightbox.min.css",
+              "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [
-              "node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"
+              "node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js",
+              "node_modules/leaflet/dist/leaflet.js"
             ]
           },
           "configurations": {

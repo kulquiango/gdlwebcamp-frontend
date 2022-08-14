@@ -15,9 +15,12 @@ import { GuestsPagesComponent } from './pages/guests-pages/guests-pages.componen
 import { ConferencePageComponent } from './pages/conference-page/conference-page.component';
 import { InfoConferenceComponent } from './components/info-conference/info-conference.component';
 
+import { ReservationsComponent } from './pages/reservations/reservations.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
-  imports: [CommonModule, MainRoutingModule],
+  imports: [CommonModule, MainRoutingModule, ReactiveFormsModule],
   declarations: [
     HomeComponent,
     HeaderComponent,
@@ -31,6 +34,8 @@ import { InfoConferenceComponent } from './components/info-conference/info-confe
     GuestsPagesComponent,
     ConferencePageComponent,
     InfoConferenceComponent,
+    ReservationsComponent,
+    MapComponent,
   ],
   exports: [HomeComponent],
 })

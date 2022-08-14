@@ -5,6 +5,7 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GuestsPagesComponent } from './pages/guests-pages/guests-pages.component';
 import { ConferencePageComponent } from './pages/conference-page/conference-page.component';
+import { ReservationsComponent } from './pages/reservations/reservations.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'conferences',
     component: ConferencePageComponent,
+  },
+  {
+    path: 'reservations',
+    component: ReservationsComponent,
   },
   {
     path: '**',
