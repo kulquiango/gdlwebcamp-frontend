@@ -1,39 +1,19 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core'
+import { CrudGuestsService } from 'src/app/service/crudGuests.service'
 
 @Component({
-  selector: 'app-guests',
-  templateUrl: './guests.component.html',
-  styleUrls: ['./guests.component.css'],
+	selector: 'app-guests',
+	templateUrl: './guests.component.html',
+	styleUrls: ['./guests.component.css'],
 })
 export class GuestsComponent implements OnInit {
-  constructor() {}
+	public guests: Array<any> = []
 
-  ngOnInit(): void {}
+	constructor(private serviceGuests: CrudGuestsService) {}
 
-  guests = [
-    {
-      name: 'Rafael Bautista',
-      url: 'assets/images/guests/invitado1.jpg',
-    },
-    {
-      name: 'Sharu Herrera',
-      url: 'assets/images/guests/invitado2.jpg',
-    },
-    {
-      name: 'Gregorio Sanchez',
-      url: 'assets/images/guests/invitado3.jpg',
-    },
-    {
-      name: 'Susana Rivera',
-      url: 'assets/images/guests/invitado4.jpg',
-    },
-    {
-      name: 'Harold Garcia',
-      url: 'assets/images/guests/invitado5.jpg',
-    },
-    {
-      name: 'Susana Sanchez',
-      url: 'assets/images/guests/invitado6.jpg',
-    },
-  ];
+	ngOnInit(): void {
+		this.serviceGuests.read().subscribe((res) => {
+			this.guests = res.data
+		})
+	}
 }

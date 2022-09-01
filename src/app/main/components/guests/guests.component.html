@@ -1,11 +1,11 @@
 <section class="contenedor wrapper">
-  <h2>Nuestros Invitados</h2>
-  <ul class="lista-invitados">
-    <li class="invitado" *ngFor="let guest of guests">
-      <a class="invitado-info" [href]="guest.url" data-lightbox="galeria">
-        <img [src]="guest.url" alt="Imagen invitado" />
-        <p>{{ guest.name }}</p>
-      </a>
-    </li>
-  </ul>
+	<h2>Nuestros Invitados</h2>
+	<ul class="lista-invitados">
+		<li class="invitado" *ngFor="let guest of guests">
+			<a class="invitado-info" [href]="guest.urlImg" data-lightbox="galeria">
+				<img [src]="'assets/images/guests/' + guest.urlImg" alt="Imagen invitado" />
+				<p>{{ guest.name + ' ' + guest.lastname }}</p>
+			</a>
+		</li>
+	</ul>
 </section>
