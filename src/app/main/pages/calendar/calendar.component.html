@@ -1,30 +1,27 @@
 <app-header></app-header>
 <section class="seccion contenedor">
 	<h2>Calendario de eventos</h2>
-	<div class="calendario">
+	<div class="calendario" *ngFor="let event of events">
 		<h3>
 			<i class="fa fa-calendar"></i>
-			Viernes, 09 de Diciembre del 2016
+			{{ dateEvent(event[0].date) }}
 		</h3>
 
 		<ul class="list-day">
-			<li *ngFor="let event of events" class="dia">
+			<li *ngFor="let data of event" class="dia">
 				<div class="dia">
-					<p class="titulo">{{ event.name }}</p>
-
+					<p class="titulo">{{ data.name }}</p>
 					<p class="hora">
-						<i class="fa fa-clock-o" aria-hidden="true"></i>
-						{{ event.hour }}
+						<i class="fa fa-clock-o" aria-hidden="true"></i
+						>{{ formatDate(data.date) + ' ' + data.hour }}
 					</p>
-
 					<p>
-						<i class="fa fa-code" aria-hidden="true"></i>
-						{{ event.event }}
+						<i class="{{ data._idCategory.icon }}" aria-hidden="true"></i
+						>{{ data._idCategory.category }}
 					</p>
-
 					<p>
-						<i class="fa fa-user" aria-hidden="true"></i>
-						{{ event.teacher }}
+						<i class="fa fa-user" aria-hidden="true"></i
+						>{{ data._idGuest.name + ' ' + data._idGuest.lastname }}
 					</p>
 				</div>
 			</li>
