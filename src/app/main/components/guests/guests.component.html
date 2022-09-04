@@ -2,7 +2,7 @@
 	<h2>Nuestros Invitados</h2>
 	<ul class="lista-invitados">
 		<li class="invitado" *ngFor="let guest of guests">
-			<a class="invitado-info" [href]="guest.urlImg" data-lightbox="galeria">
+			<a class="invitado-info" [href]="'assets/images/guests/' +guest.urlImg" data-lightbox="galeria">
 				<img [src]="'assets/images/guests/' + guest.urlImg" alt="Imagen invitado" />
 				<p>{{ guest.name + ' ' + guest.lastname }}</p>
 			</a>

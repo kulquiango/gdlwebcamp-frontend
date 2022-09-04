@@ -2,33 +2,43 @@
 <div class="seccion contenedor"></div>
 <h2>Registro de Usuarios</h2>
 <form action="" class="registro">
-  <div class="caja registro">
-    <div class="wraper-campo">
-      <div class="campo" *ngFor="let info of formData">
-        <label [for]="info.id">{{ info.label }}: </label>
-        <input [type]="info.type" [id]="info.id" />
-      </div>
-    </div>
+	<div class="caja registro">
+		<div class="wraper-campo">
+			<div class="campo" *ngFor="let info of formData">
+				<label [for]="info.id">{{ info.label }}: </label>
+				<input [type]="info.type" [id]="info.id" />
+			</div>
+		</div>
 
-    <div class="paquetes" id="paquetes">
-      <h3>Elige el número de boletos</h3>
-      <app-prices></app-prices>
-    </div>
-  </div>
+		<div class="paquetes" id="paquetes">
+			<h3>Elige el número de boletos</h3>
+			<app-prices></app-prices>
+		</div>
+	</div>
 
-  <div id="eventos" class="eventos clearfix">
-    <h3>Elige tus talleres</h3>
+	<div id="eventos" class="eventos">
+		<h3>Elige tus Talleres</h3>
 
-    <div class="caja">
-      <div class="" *ngFor="let day of days">
-        <h4>{{ day }}</h4>
-      </div>
-    </div>
-  </div>
+		<div class="caja">
+			<div class="contenido-dia" *ngFor="let event of events">
+				<h4>{{ dateEvent(event[0].date, 'day') }}</h4>
 
-  <div class="resumen clearfix" id="resumen">
-    <h3>Pagos y Extras</h3>
-    <div class="caja clearfix"></div>
-  </div>
+				<p>Test</p>
+				<label *ngFor="let data of event">
+					<input type="checkbox" />
+					<time>{{ data.hour }} </time>
+					<span>{{ data.name }}</span>
+					<br />
+					<span class="conferencista">Conferencista:</span>
+					<span class="autor">{{ data._idGuest.name + ' ' + data._idGuest.lastname }}</span>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="resumen clearfix" id="resumen">
+		<h3>Pagos y Extras</h3>
+		<div class="caja clearfix"></div>
+	</div>
 </form>
 <app-footer></app-footer>

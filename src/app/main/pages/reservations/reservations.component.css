@@ -1,233 +1,233 @@
 /* Registros */
 
 form.registro h3 {
-  text-align: center;
-  text-transform: uppercase;
-  margin: 20px 0 0 0;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px 0 0 0;
 }
 
 form.registro label {
-  margin-bottom: 5px;
-  font-weight: bold;
+	margin-bottom: 5px;
+	font-weight: bold;
 }
 
 h4 {
-  text-align: center;
-  text-transform: uppercase;
-  border-bottom: 2px solid #fe4918;
-  padding-bottom: 10px;
-  font-size: 1.2em;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 2px solid #fe4918;
+	padding-bottom: 10px;
+	font-size: 1.2em;
 }
 
 .caja {
-  flex-wrap: wrap;
-  background-color: white;
-  border: 1px solid #e1e1e1;
-  padding: 10px;
-  margin: 10px;
-  margin-bottom: 4rem;
+	flex-wrap: wrap;
+	background-color: white;
+	border: 1px solid #e1e1e1;
+	padding: 10px;
+	margin: 10px;
+	margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
-  div.caja {
-    margin: 3rem;
-  }
+	div.caja {
+		margin: 3rem;
+	}
 }
 .campo {
-  padding: 20px;
+	padding: 20px;
 }
 @media (min-width: 768px) {
-  .wraper-campo {
-    display: flex;
-    justify-content: center;
-  }
-  div.campo {
-    flex-basis: calc(33.3% -0.5rem);
-  }
+	.wraper-campo {
+		display: flex;
+		justify-content: center;
+	}
+	div.campo {
+		flex-basis: calc(33.3% -0.5rem);
+	}
 }
 
 div.paquetes .tabla-precio:hover {
-  transform: none;
-  box-shadow: none;
+	transform: none;
+	box-shadow: none;
 }
 
 div.paquetes .tabla-precio input {
-  clear: both;
-  width: 100px;
-  margin: 10px auto 0 auto;
-  display: block;
+	clear: both;
+	width: 100px;
+	margin: 10px auto 0 auto;
+	display: block;
 }
 
 .contenido-dia {
-  padding: 10px;
-  display: none;
+	padding: 10px;
+	/* display: none; */
 }
 
 .contenido-dia > div {
-  float: left;
-  width: 100%;
-  padding: 5px;
+	float: left;
+	width: 100%;
+	padding: 5px;
 }
 
 .contenido-dia > div p {
-  text-align: left;
+	text-align: left;
 }
 
-.contenido-dia > div label {
-  display: block;
-  margin-bottom: 5px;
+.contenido-dia > label {
+	display: block;
+	margin-bottom: 5px;
 }
 
 .contenido-dia > div input {
-  margin-right: 10px;
-  margin-top: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
 }
 
-.contenido-dia > div label time {
-  color: #fe4918;
-  font-weight: bold;
+.contenido-dia > label time {
+	color: #fe4918;
+	font-weight: bold;
 }
 
 @media (min-width: 768px) {
-  .contenido-dia > div {
-    width: 33.3%;
-  }
-  .contenido-dia > div label {
-    margin-bottom: 10px;
-  }
+	.contenido-dia > div {
+		width: 33.3%;
+	}
+	.contenido-dia > div label {
+		margin-bottom: 10px;
+	}
 }
 
 .contenido-dia .autor {
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 12px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 
 .contenido-dia .conferencista {
-  color: #fe4918;
-  font-size: 12.5px;
-  text-transform: uppercase;
-  font-weight: bold;
+	color: #fe4918;
+	font-size: 12.5px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 /* resumen registro */
 
 div.resumen p {
-  font-size: 1.2em;
-  text-transform: uppercase;
+	font-size: 1.2em;
+	text-transform: uppercase;
 }
 
 div.resumen .extras {
-  padding: 5px;
-  width: 100%;
+	padding: 5px;
+	width: 100%;
 }
 
 @media (min-width: 480px) {
-  div.resumen .extras {
-    float: left;
-    padding: 30px;
-    width: 50%;
-  }
+	div.resumen .extras {
+		float: left;
+		padding: 30px;
+		width: 50%;
+	}
 }
 
 div.resumen div.orden {
-  text-align: left;
-  margin-bottom: 10px;
+	text-align: left;
+	margin-bottom: 10px;
 }
 
 div.resumen div.orden input {
-  margin: 10px 50% 0 0;
+	margin: 10px 50% 0 0;
 }
 
 div.resumen div.total {
-  clear: both;
-  width: 50%;
-  padding: 0px 30px;
+	clear: both;
+	width: 50%;
+	padding: 0px 30px;
 }
 
 @media (max-width: 480px) {
-  div.resumen div.total {
-    width: 100%;
-  }
+	div.resumen div.total {
+		width: 100%;
+	}
 }
 
 @media (min-width: 768px) {
-  div.resumen div.total {
-    clear: none;
-    float: right;
-    width: 50%;
-    padding: 30px;
-  }
+	div.resumen div.total {
+		clear: none;
+		float: right;
+		width: 50%;
+		padding: 30px;
+	}
 }
 
 div.resumen input {
-  display: block;
-  margin: 10px auto;
+	display: block;
+	margin: 10px auto;
 }
 
 #listas-productos {
-  width: 250px;
-  background: #e1e1e1;
-  padding: 20px;
-  display: none;
+	width: 250px;
+	background: #e1e1e1;
+	padding: 20px;
+	display: none;
 }
 
 @media (min-width: 768px) {
-  #listas-productos {
-    background: #e1e1e1;
-    padding: 20px;
-    display: none;
-    width: 100%;
-  }
+	#listas-productos {
+		background: #e1e1e1;
+		padding: 20px;
+		display: none;
+		width: 100%;
+	}
 }
 
 #suma-total {
-  text-align: center;
-  font-size: 2em;
-  color: #fe4918;
+	text-align: center;
+	font-size: 2em;
+	color: #fe4918;
 }
 
 #error {
-  clear: both;
-  padding: 20px;
-  text-align: center;
-  display: none;
-  margin-top: 5px;
+	clear: both;
+	padding: 20px;
+	text-align: center;
+	display: none;
+	margin-top: 5px;
 }
 
 #mapa {
-  z-index: 0;
+	z-index: 0;
 }
 
 input:focus {
-  border: 0px solid#fe4918 !important;
-  box-shadow: 0 0 8px #fe4918;
-  outline: 0 none;
+	border: 0px solid#fe4918 !important;
+	box-shadow: 0 0 8px #fe4918;
+	outline: 0 none;
 }
 
 @media (max-width: 480px) {
-  input[type="number"] {
-    max-width: 90% !important;
-    width: 250px !important;
-    border-radius: 5px;
-    height: 30px;
-  }
-  input[type="text"] {
-    max-width: 100% !important;
-    width: 300px !important;
-    border-radius: 5px;
-    height: 30px;
-    margin-top: 7px;
-  }
+	input[type='number'] {
+		max-width: 90% !important;
+		width: 250px !important;
+		border-radius: 5px;
+		height: 30px;
+	}
+	input[type='text'] {
+		max-width: 100% !important;
+		width: 300px !important;
+		border-radius: 5px;
+		height: 30px;
+		margin-top: 7px;
+	}
 }
 
 @media (max-width: 480px) {
-  #calcular {
-    margin: 20px !important;
-  }
+	#calcular {
+		margin: 20px !important;
+	}
 }
 
 #calcular {
-  margin: 20px 0;
+	margin: 20px 0;
 }

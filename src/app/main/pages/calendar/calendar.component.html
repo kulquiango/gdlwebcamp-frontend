@@ -4,7 +4,7 @@
 	<div class="calendario" *ngFor="let event of events">
 		<h3>
 			<i class="fa fa-calendar"></i>
-			{{ dateEvent(event[0].date) }}
+			{{ dateEvent(event[0].date, 'complete') }}
 		</h3>
 
 		<ul class="list-day">
