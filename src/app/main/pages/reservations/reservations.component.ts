@@ -16,7 +16,7 @@ export class ReservationsComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this._events = this.serviceCalendar.orderedCalendar
+		console.log(this.serviceCalendar.getOrderedCalendar('reservation'))
 	}
 
 	dateEvent(getDate: string, type: string) {

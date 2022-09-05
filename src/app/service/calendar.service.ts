@@ -7,22 +7,33 @@ import { CrudEventService } from './crudEvent.service'
 })
 export class CalendarService {
 	private _orderedCalendar: Array<any> = []
-	private temporalArray: any = []
+	private _orderedReservation: Array<any> = []
+
 	constructor(private crudCalendarService: CrudEventService) {
 		this.crudCalendarService.read().subscribe(({ data }) => {
-			this.orderDate(data)
-		})
-	}
-	orderDate(data: Array<any>) {
-		let dataReq = orderByElement(data)
+			let dataReq = orderByElement(data, 'date')
 
-		dataReq.forEach((element) => {
-			this.orderedCalendar.push(element)
+			dataReq.forEach((element) => {
+				this._orderedCalendar.push(element)
+			})
 		})
 	}
 
-	public get orderedCalendar(): Array<any> {
-		return this._orderedCalendar
+	public getOrderedCalendar(type: string): Array<any> {
+		if (type === 'calendar') {
+			return this._orderedCalendar
+		} else {
+			let data: Array<any> = []
+			let events: Array<any> = []
+			this._orderedCalendar.forEach((element) => {
+				data.push(this.orderByCategory(element))
+			})
+			data.forEach((e) => {
+				events.push(orderByElement(e, '_idCategory'))
+			})
+
+			return events
+		}
 	}
 
 	dateEvent(getDate: string, type: string) {
@@ -106,5 +117,35 @@ export class CalendarService {
 
 	formatDate(date: string) {
 		return date.substring(0, 10)
+	}
+
+	orderByHour(data: Array<any>) {
+		data.sort((a, b) => {
+			if (a.hour > b.hour) {
+				return 1
+			}
+			if (a.hour < b.hour) {
+				return -1
+			}
+			// a must be equal to b
+			return 0
+		})
+
+		return data
+	}
+
+	orderByCategory(data: Array<any>) {
+		data.sort((a, b) => {
+			if (a._idCategory.category > b._idCategory.category) {
+				return 1
+			}
+			if (a._idCategory.category < b._idCategory.category) {
+				return -1
+			}
+			// a must be equal to b
+			return 0
+		})
+
+		return data
 	}
 }

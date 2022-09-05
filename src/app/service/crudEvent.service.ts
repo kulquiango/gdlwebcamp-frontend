@@ -8,7 +8,7 @@ import { Router } from '@angular/router'
 })
 export class CrudEventService {
 	private baseUrl = environment.baseUrl
-	constructor(private httpClient: HttpClient, private router: Router) {}
+	constructor(private httpClient: HttpClient) {}
 	get eventInfo() {
 		return this.read()
 	}
