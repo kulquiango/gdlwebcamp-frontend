@@ -24,13 +24,13 @@ h4 {
 	background-color: white;
 	border: 1px solid #e1e1e1;
 	padding: 10px;
-	margin: 10px;
+	margin: 50px;
 	margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
 	div.caja {
-		margin: 3rem;
+		margin: 1rem 15%;
 	}
 }
 .campo {
@@ -42,7 +42,7 @@ h4 {
 		justify-content: center;
 	}
 	div.campo {
-		flex-basis: calc(33.3% -0.5rem);
+		flex-basis: calc(33.3% - 0.5rem);
 	}
 }
 
@@ -58,176 +58,76 @@ div.paquetes .tabla-precio input {
 	display: block;
 }
 
-.contenido-dia {
+.wrapperInfoEvent {
 	padding: 10px;
 	/* display: none; */
 }
 
-.contenido-dia > div {
+.wrapperInfoEvent > div {
 	float: left;
 	width: 100%;
 	padding: 5px;
 }
 
-.contenido-dia > div p {
+.wrapperInfoEvent > div p {
 	text-align: left;
 }
 
-.contenido-dia > label {
-	display: block;
-	margin-bottom: 5px;
-}
-
-.contenido-dia > div input {
+.wrapperInfoEvent > div input {
 	margin-right: 10px;
 	margin-top: 10px;
 }
 
-.contenido-dia > label time {
+.wrapperInfoEvent > label time {
 	color: #fe4918;
 	font-weight: bold;
 }
 
 @media (min-width: 768px) {
-	.contenido-dia > div {
+	.wrapperInfoEvent > div {
 		width: 33.3%;
-	}
-	.contenido-dia > div label {
-		margin-bottom: 10px;
 	}
 }
 
-.contenido-dia .autor {
+.wrapperInfoEvent .autor {
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	font-size: 12px;
 }
 
-.contenido-dia .conferencista {
+.wrapperInfoEvent .conferencista {
 	color: #fe4918;
 	font-size: 12.5px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-/* resumen registro */
+.wrapperInfoEvent {
+	display: flex;
+	flex-direction: column;
 
-div.resumen p {
-	font-size: 1.2em;
-	text-transform: uppercase;
+	flex-grow: 1;
+	flex-basis: 30%;
 }
-
-div.resumen .extras {
-	padding: 5px;
-	width: 100%;
+.wrapperEvent {
+	display: flex;
+	margin: 2rem;
+	justify-content: center;
 }
-
-@media (min-width: 480px) {
-	div.resumen .extras {
-		float: left;
-		padding: 30px;
-		width: 50%;
-	}
+p {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.2rem;
 }
-
-div.resumen div.orden {
-	text-align: left;
-	margin-bottom: 10px;
+label {
+	margin-top: 1rem;
 }
-
-div.resumen div.orden input {
-	margin: 10px 50% 0 0;
+.info {
+	display: none;
 }
-
-div.resumen div.total {
-	clear: both;
-	width: 50%;
-	padding: 0px 30px;
-}
-
-@media (max-width: 480px) {
-	div.resumen div.total {
-		width: 100%;
-	}
-}
-
-@media (min-width: 768px) {
-	div.resumen div.total {
-		clear: none;
-		float: right;
-		width: 50%;
-		padding: 30px;
-	}
-}
-
-div.resumen input {
+.info0 {
 	display: block;
-	margin: 10px auto;
 }
-
-#listas-productos {
-	width: 250px;
-	background: #e1e1e1;
-	padding: 20px;
-	display: none;
-}
-
-@media (min-width: 768px) {
-	#listas-productos {
-		background: #e1e1e1;
-		padding: 20px;
-		display: none;
-		width: 100%;
-	}
-}
-
-#suma-total {
-	text-align: center;
-	font-size: 2em;
-	color: #fe4918;
-}
-
-#error {
-	clear: both;
-	padding: 20px;
-	text-align: center;
-	display: none;
-	margin-top: 5px;
-}
-
-#mapa {
-	z-index: 0;
-}
-
-input:focus {
-	border: 0px solid#fe4918 !important;
-	box-shadow: 0 0 8px #fe4918;
-	outline: 0 none;
-}
-
-@media (max-width: 480px) {
-	input[type='number'] {
-		max-width: 90% !important;
-		width: 250px !important;
-		border-radius: 5px;
-		height: 30px;
-	}
-	input[type='text'] {
-		max-width: 100% !important;
-		width: 300px !important;
-		border-radius: 5px;
-		height: 30px;
-		margin-top: 7px;
-	}
-}
-
-@media (max-width: 480px) {
-	#calcular {
-		margin: 20px !important;
-	}
-}
-
-#calcular {
-	margin: 20px 0;
+.info1 {
+	display: block;
 }

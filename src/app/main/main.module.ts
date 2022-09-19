@@ -16,13 +16,14 @@ import { ConferencePageComponent } from './pages/conference-page/conference-page
 import { InfoConferenceComponent } from './components/info-conference/info-conference.component'
 
 import { ReservationsComponent } from './pages/reservations/reservations.component'
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MapComponent } from './components/map/map.component'
 import { CounterDaysComponent } from './components/counter-days/counter-days.component'
 import { ProgramEventComponent } from './components/programEvent/programEvent.component'
+import { PaymentsComponent } from './components/payments/payments.component'
 
 @NgModule({
-	imports: [CommonModule, MainRoutingModule, ReactiveFormsModule],
+	imports: [CommonModule, MainRoutingModule, ReactiveFormsModule, FormsModule],
 	declarations: [
 		HomeComponent,
 		HeaderComponent,
@@ -40,6 +41,7 @@ import { ProgramEventComponent } from './components/programEvent/programEvent.co
 		MapComponent,
 		CounterDaysComponent,
 		ProgramEventComponent,
+		PaymentsComponent,
 	],
 	exports: [HomeComponent],
 })

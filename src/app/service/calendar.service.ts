@@ -1,39 +1,58 @@
 import { Injectable } from '@angular/core'
 import { orderByElement } from '../utils/orderByElement'
 import { CrudEventService } from './crudEvent.service'
+import { Router } from '@angular/router'
+import { finalize } from 'rxjs/operators'
 
 @Injectable({
 	providedIn: 'root',
 })
 export class CalendarService {
 	private _orderedCalendar: Array<any> = []
-	private _orderedReservation: Array<any> = []
+	private _orderedEvents: Array<any> = []
+	private arrayTemporal: Array<any> = []
 
-	constructor(private crudCalendarService: CrudEventService) {
-		this.crudCalendarService.read().subscribe(({ data }) => {
-			let dataReq = orderByElement(data, 'date')
-
-			dataReq.forEach((element) => {
-				this._orderedCalendar.push(element)
+	constructor(private crudCalendarService: CrudEventService, private router: Router) {
+		this.crudCalendarService
+			.read()
+			.pipe(
+				finalize(() => {
+					this.addArray()
+				})
+			)
+			.subscribe(({ data }) => {
+				this.arrayTemporal = orderByElement(data, 'date')
 			})
-		})
 	}
 
-	public getOrderedCalendar(type: string): Array<any> {
-		if (type === 'calendar') {
-			return this._orderedCalendar
-		} else {
-			let data: Array<any> = []
-			let events: Array<any> = []
-			this._orderedCalendar.forEach((element) => {
-				data.push(this.orderByCategory(element))
-			})
-			data.forEach((e) => {
-				events.push(orderByElement(e, '_idCategory'))
-			})
+	private addArray() {
+		let orderedCategory: Array<any> = []
+		let events: Array<any> = []
 
-			return events
-		}
+		//Array Calendar Init
+		this.arrayTemporal.forEach((element) => {
+			this._orderedCalendar.push(element)
+		})
+		//Array Calendar end
+
+		//Array reservation Init
+		this._orderedCalendar.forEach((element) => {
+			orderedCategory.push(this.orderByCategory(element))
+		})
+		orderedCategory.forEach((e) => {
+			events.push(orderByElement(e, '_idCategory'))
+		})
+
+		events.forEach((event) => {
+			this._orderedEvents.push(event)
+		})
+	}
+	public get orderedCalendar(): Array<any> {
+		return this._orderedCalendar
+	}
+
+	public get orderedEvents(): Array<any> {
+		return this._orderedEvents
 	}
 
 	dateEvent(getDate: string, type: string) {

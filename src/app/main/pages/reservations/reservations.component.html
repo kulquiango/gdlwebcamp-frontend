@@ -12,7 +12,7 @@
 
 		<div class="paquetes" id="paquetes">
 			<h3>Elige el número de boletos</h3>
-			<app-prices></app-prices>
+			<app-prices [isReservation]="true" (ticket)="readTickets($event)"></app-prices>
 		</div>
 	</div>
 
@@ -20,25 +20,45 @@
 		<h3>Elige tus Talleres</h3>
 
 		<div class="caja">
-			<div class="contenido-dia" *ngFor="let event of events">
-				<h4>{{ dateEvent(event[0].date, 'day') }}</h4>
-
-				<p>Test</p>
-				<label *ngFor="let data of event">
-					<input type="checkbox" />
-					<time>{{ data.hour }} </time>
-					<span>{{ data.name }}</span>
-					<br />
-					<span class="conferencista">Conferencista:</span>
-					<span class="autor">{{ data._idGuest.name + ' ' + data._idGuest.lastname }}</span>
-				</label>
+			<div
+				*ngFor="let event of events; index as i"
+				[ngClass]="{
+					info0: ticket === i + 1,
+					info1: ticket >= i + 1
+				}"
+				class="info"
+			>
+				<h4>{{ dateEvent(event[0][0].date, 'day') }}</h4>
+				<div class="wrapperEvent">
+					<div *ngFor="let info of event" class="wrapperInfoEvent">
+						<p>{{ info[0]._idCategory.category }}:</p>
+						<label *ngFor="let infoData of info">
+							<input
+								type="checkbox"
+								[(ngModel)]="eventsCheckbox[infoData._id]"
+								[name]="infoData._id"
+							/>
+							<p>{{ infoData._id }}</p>
+							<time>{{ infoData.hour }} </time>
+							<span>{{ infoData.name }}</span>
+							<br />
+							<span class="conferencista">Conferencista:</span>
+							<span class="autor">{{
+								infoData._idGuest.name + ' ' + infoData._idGuest.lastname
+							}}</span>
+							<br />
+						</label>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="resumen clearfix" id="resumen">
+	<div class="resumen" id="resumen">
 		<h3>Pagos y Extras</h3>
-		<div class="caja clearfix"></div>
+		<div class="caja">
+			<app-payments></app-payments>
+		</div>
 	</div>
 </form>
 <app-footer></app-footer>

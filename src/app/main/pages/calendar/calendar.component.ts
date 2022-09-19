@@ -15,7 +15,7 @@ export class CalendarComponent implements OnInit {
 	constructor(private calendarService: CalendarService) {}
 
 	ngOnInit(): void {
-		this.events = this.calendarService.getOrderedCalendar('calendar')
+		this.events = this.calendarService.orderedCalendar
 	}
 
 	dateEvent(data: string, type: string) {

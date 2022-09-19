@@ -1,21 +1,26 @@
 <section class="precios seccion">
-  <h2>Precios</h2>
-  <div class="contenedor">
-    <ul class="lista-precios clearfix">
-      <li *ngFor="let card of cards; let even = even">
-        <div class="tabla-precio">
-          <h3>{{ card.title }}</h3>
-          <p class="numero">{{ card.price }}</p>
-          <ul>
-            <li>Bocadillos Gratis</li>
-            <li>Todas las conferencias</li>
-            <li>Todos los talleres</li>
-          </ul>
-          <a href="button" class="button" [ngClass]="{ hollow: even }"
-            >Comprar</a
-          >
-        </div>
-      </li>
-    </ul>
-  </div>
+	<h2>Precios</h2>
+	<div class="contenedor">
+		<ul class="lista-precios">
+			<li *ngFor="let card of cards; let even = even">
+				<div [class]="'tabla-precio' + ' ' + classHover">
+					<h3>{{ card.title }}</h3>
+					<p class="numero">{{ card.price }}</p>
+					<ul>
+						<li>Bocadillos Gratis</li>
+						<li>Todas las conferencias</li>
+						<li>Todos los talleres</li>
+					</ul>
+
+					<div *ngIf="isReservation; else elseBlock">
+						<span>Boletos deseados:</span>
+						<input type="number" [(ngModel)]="tickets[card.name]" (keyup)="onKeyUpEvent($event)" />
+					</div>
+					<ng-template #elseBlock
+						><a href="button" class="button" [ngClass]="{ hollow: even }">Comprar</a>
+					</ng-template>
+				</div>
+			</li>
+		</ul>
+	</div>
 </section>

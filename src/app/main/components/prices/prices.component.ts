@@ -1,27 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
 
 @Component({
-  selector: 'app-prices',
-  templateUrl: './prices.component.html',
-  styleUrls: ['./prices.component.css'],
+	selector: 'app-prices',
+	templateUrl: './prices.component.html',
+	styleUrls: ['./prices.component.css'],
 })
 export class PricesComponent implements OnInit {
-  constructor() {}
+	@Input() classHover: string = ''
+	@Input() isReservation: boolean = false
+	@Output() ticket = new EventEmitter<any>()
 
-  ngOnInit(): void {}
+	constructor() {}
 
-  cards = [
-    {
-      title: 'Pase por día',
-      price: '$30',
-    },
-    {
-      title: 'Todos los días',
-      price: '$50',
-    },
-    {
-      title: 'Pase por día',
-      price: '$45',
-    },
-  ];
+	ngOnInit(): void {}
+	tickets: any = {
+		passForOneDay: 0,
+		passEveryDay: 0,
+		passForTwoDays: 0,
+	}
+	onKeyUpEvent(event: any) {
+		this.ticket.emit(this.tickets)
+	}
+	cards = [
+		{
+			title: 'Pase por día',
+			price: '$30',
+			name: 'passForOneDay',
+		},
+		{
+			title: 'Todos los días',
+			price: '$50',
+			name: 'passEveryDay',
+		},
+		{
+			title: 'Pase dos día',
+			price: '$45',
+			name: 'passForTwoDays',
+		},
+	]
 }
